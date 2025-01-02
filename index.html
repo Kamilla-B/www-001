@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Home</title>
+  <style>
+    .my-slideshow img {
+      width: 100%;
+      /* Responsive width */
+      height: auto;
+      /* Maintain aspect ratio */
+      max-height: 600px;
+      /* Set a maximum height */
+      object-fit: cover;
+      /* Cover the area */
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="w3-bar w3-light-grey">
+        <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">ABOUT US</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">INFO 1</a>
+                <a href="#" class="w3-bar-item w3-button">INFO 2</a>
+                <a href="#" class="w3-bar-item w3-button">INFO 3</a>
+            </div>
+        </div>
+        <a href="history.html" class="w3-bar-item w3-button">HISTORY OF BURYATIA</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">TRADITION</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">DANCE</a>
+                <a href="#" class="w3-bar-item w3-button">SPORT</a>
+                <a href="#" class="w3-bar-item w3-button">CUISINE</a>
+                <a href="#" class="w3-bar-item w3-button">YURTS</a>
+                <a href="#" class="w3-bar-item w3-button">CULTURAL ATTIRE</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">PERSONAL STORIES</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">READ STORIES</a>
+                <a href="#" class="w3-bar-item w3-button">SUBMIT A STORY</a>
+                <a href="#" class="w3-bar-item w3-button">WHY DO WE DO THIS?</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">LAKE BAIKAL</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">LAKE BAIKAL</a>
+                <a href="#" class="w3-bar-item w3-button">ACTIVITIES</a>
+                <a href="#" class="w3-bar-item w3-button">POLLUTION CRISIS</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">HELP OUT</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">HELP KEEP LAKE BAIKAL CLEAN</a>
+                <a href="#" class="w3-bar-item w3-button">RUSSIAN DRAFTING</a>
+                <a href="#" class="w3-bar-item w3-button">SPREAD AWARENESS</a>
+                <a href="#" class="w3-bar-item w3-button">SUPPORT SMALL BUSINESSES</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">RELIGION IN BURTYATIA</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">BUDDHISM IN BURYATIA</a>
+                <a href="#" class="w3-bar-item w3-button">SHAMANISM</a>
+                <a href="#" class="w3-bar-item w3-button">RUSSIAN ORTHODOX</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">BURYAT CUISINE</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">BUUZY</a>
+                <a href="#" class="w3-bar-item w3-button">DISH 1</a>
+                <a href="#" class="w3-bar-item w3-button">DISH 2</a>
+            </div>
+        </div>
+    </div>
+</nav>
+  
+  <header class="w3-container w3-center w3-blue">
+    <h1>The People of Buryatia</h1>
+    <h2>Who are we?</h2>
+  </header>
+  <!-- <header class="w3-container"></header> -->
+  <div class="w3-content w3-display-container my-slideshow">
+    <img class="mySlides" src="images/buuzy.jpeg">
+    <img class="mySlides" src="images/frozen.jpeg">
+    <img class="mySlides" src="images/temple.jpeg">
+    <img class="mySlides" src="images/horses.jpeg">
+    <img class="mySlides" src="images/target.jpg">
+    <img class="mySlides" src="images/yurts.png">
+    <img class="mySlides" src="images/wrestle.JPG">
+    <img class="mySlides" src="images/attire.jpg">
+    <img class="mySlides" src="images/religion.jpeg">
+  </div>
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length };
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
